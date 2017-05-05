@@ -36,6 +36,16 @@ class BooksController < ApplicationController
         render :edit
       end
   end
+  
+  def destroy
+  
+    @book = Book.find_by(id: params[:id])
+    
+    @book.destroy if @book
+  
+    redirect_to books_path, notice: "候選人資料已刪除!"
+    
+  end
 
    
   private
