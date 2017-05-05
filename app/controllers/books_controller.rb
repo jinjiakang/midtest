@@ -19,6 +19,12 @@ class BooksController < ApplicationController
    
   end
   
+  def edit
+  
+    @book = Book.find_by(id: params[:id])
+  
+  end
+   
   private
   
   def book_params
