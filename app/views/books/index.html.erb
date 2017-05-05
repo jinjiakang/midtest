@@ -1,6 +1,6 @@
   <h1>書本列表</h1>
 
-  <%= link_to "新增書本", new_book_path %>
+  <%= link_to "新增書本", new_book_path ,  class: "waves-effect waves-light btn" %>
 
   <table>
     <thead>
@@ -19,8 +19,8 @@
         <td><%= book.author %></td>
         <td>NT$ <%= book.price %></td>
         <td>
-          <%= link_to "編輯", edit_book_path(book) %>
-          <%= link_to "刪除", book_path(book), method: "delete", data: { confirm: "確認刪除此書本" } %>
+          <%= link_to "編輯", edit_book_path(book), class: "waves-effect waves-light btn" %>
+          <%= link_to "刪除", book_path(book), method: "delete", data: { confirm: "確認刪除此書本" } ,class: "waves-effect waves-light btn" %>
         </td>
       </tr>
       <% end %>
