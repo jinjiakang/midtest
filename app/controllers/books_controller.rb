@@ -19,6 +19,12 @@ class BooksController < ApplicationController
    
   end
   
+  def show
+    
+    @book = Book.find_by(id: params[:id])
+  
+  end
+  
   def edit
   
     @book = Book.find_by(id: params[:id])
@@ -29,12 +35,15 @@ class BooksController < ApplicationController
       @book = Book.find_by(id: params[:id])
 
       if @book.update(book_params)
-        # 成功
+        
         redirect_to books_path, notice: "書本資料更新成功!"
+      
       else
-        # 失敗
+      
         render :edit
+      
       end
+  
   end
   
   def destroy

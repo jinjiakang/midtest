@@ -14,7 +14,7 @@
     <tbody>
       <% @books.each do |book| %>
       <tr>
-        <td><%= book.name %></td>
+        <td><%= link_to display_name(book) ,book  %></td>
         <td><%= book.intro %></td>
         <td><%= book.author %></td>
         <td>NT$ <%= book.price %></td>

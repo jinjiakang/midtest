@@ -1,0 +1,25 @@
+<h1>
+
+  <%= display_name(@book)  %>
+
+</h1>
+
+<table >
+
+    <tr>
+      <td>簡介</td>
+      <td><%= @book.intro %></td>
+    </tr>
+    <tr>
+      <td>作者</td>
+      <td><%= @book.author %></td>
+    </tr>
+    <tr>
+      <td>價錢</td>
+      <td><%= @book.price %></td>
+    </tr>
+
+
+</table>
+  <%= link_to "edit",edit_book_path(@book)  %>
+  <%= link_to "back" ,books_path  %>
